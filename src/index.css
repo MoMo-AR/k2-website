@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Cambay:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  font-family: 'Cambay', sans-serif;
+}
+
+/* 隐藏所有滚动条 */
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+} 
