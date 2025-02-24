@@ -1,12 +1,12 @@
 import { Box, Typography, Container, Grid, Paper } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import k2Logo from '../assets/k2_logo.png';
-import facility1 from '../assets/facility1.jpg';
-import facility2 from '../assets/facility2.jpg';
-import facility3 from '../assets/facility3.jpg';
-import facility4 from '../assets/facility4.jpg';
-import facility5 from '../assets/facility5.jpg';
-import facility6 from '../assets/facility6.jpg';
+import facility1 from '../assets/facility1.JPG';
+import facility2 from '../assets/facility2.JPG';
+import facility3 from '../assets/facility3.JPG';
+import facility4 from '../assets/facility4.JPG';
+import facility5 from '../assets/facility5.JPG';
+import facility6 from '../assets/facility6.JPG';
 
 function AboutUs() {
   const navigate = useNavigate();
