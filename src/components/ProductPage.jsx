@@ -9,6 +9,7 @@ import battery20ah from '../assets/12v-20ah.png';
 import ebox from '../assets/e-box.png';
 import battery123a from '../assets/123a.png';
 import { useNavigate } from 'react-router-dom';
+import Navigation from './Navigation';
 
 function ProductPage() {
   const navigate = useNavigate();
@@ -47,36 +48,7 @@ function ProductPage() {
             onClick={() => navigate('/')}
           />
           <Box sx={{ display: 'flex', gap: 4 }}>
-          <Typography
-              sx={{
-                color: 'white',
-                cursor: 'pointer',
-                '&:hover': { opacity: 0.8 },
-              }}
-              onClick={() => navigate('/product')}
-            >
-              Products
-            </Typography>
-            <Typography
-              sx={{
-                color: 'white',
-                cursor: 'pointer',
-                '&:hover': { opacity: 0.8 },
-              }}
-              onClick={() => navigate('/about')}
-            >
-              About us
-            </Typography>
-            <Typography
-              sx={{
-                color: 'white',
-                cursor: 'pointer',
-                '&:hover': { opacity: 0.8 },
-              }}
-              onClick={() => navigate('/contact')}
-            >
-              Contact
-            </Typography>
+          <Navigation />
           </Box>
         </Box>
 

@@ -2,54 +2,10 @@ import { Box, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import k2Logo from '../assets/k2_logo.png';
 import { TypeAnimation } from 'react-type-animation';
+import Navigation from './Navigation';
 
 function Hero() {
   const navigate = useNavigate();
-
-  // 移动导航到组件顶层
-  const Navigation = () => {
-    return (
-      <div style={{ 
-        display: 'flex', 
-        gap: '32px',
-        position: 'relative',
-        zIndex: 9999 
-      }}>
-        <Box sx={{ display: 'flex', gap: 4 }}>
-          <Typography
-            sx={{
-              color: 'white',
-              cursor: 'pointer',
-              '&:hover': { opacity: 0.8 },
-            }}
-            onClick={() => navigate('/product')}
-          >
-            Products
-          </Typography>
-          <Typography
-            sx={{
-              color: 'white',
-              cursor: 'pointer',
-              '&:hover': { opacity: 0.8 },
-            }}
-            onClick={() => navigate('/about')}
-          >
-            About us
-          </Typography>
-          <Typography
-            sx={{
-              color: 'white',
-              cursor: 'pointer',
-              '&:hover': { opacity: 0.8 },
-            }}
-            onClick={() => navigate('/contact')}
-          >
-            Contact
-          </Typography>
-        </Box>
-      </div>
-    );
-  };
 
   return (
     <Box
@@ -85,6 +41,7 @@ function Hero() {
           sx={{
             height: { xs: '30px', md: '40px' },
           }}
+          onClick={() => navigate('/')}
         />
 
         {/* Navigation */}
@@ -105,7 +62,7 @@ function Hero() {
         <Box sx={{ maxWidth: '800px' }}>
           <Typography
             sx={{
-              color: '#575C4B',
+              color: '#0B3524',
               fontSize: { xs: '12px', md: '14px' },
               letterSpacing: { xs: 2, md: 4 },
               mb: 2,
@@ -115,13 +72,14 @@ function Hero() {
                 content: '""',
                 width: { xs: '20px', md: '40px' },
                 height: '2px',
-                bgcolor: '#575C4B',
+                bgcolor: '#0B3524',
                 mr: 2,
               }
             }}
           >
-            Born of the American spirit
+            BORN OF THE AMERICAN SPIRIT
           </Typography>
+          
           <TypeAnimation
             sequence={[
               'More Than Just Energy,',
@@ -138,15 +96,15 @@ function Hero() {
               fontWeight: 600,
               marginBottom: '16px',
               display: 'inline-block',
-              color: '#333333',
+              color: '#0B3524',
               fontFamily: 'Roboto, sans-serif'
             }}
             repeat={Infinity}
           />
           
           <Typography variant="h2" sx={{ 
-            fontSize: '48px', 
-            fontWeight: 540,
+            fontSize: '64px', 
+            fontWeight: 600,
             opacity: 0,
             animation: 'fadeIn 1s ease-in forwards',
             '@keyframes fadeIn': {
@@ -157,7 +115,7 @@ function Hero() {
             color: '#333333',
             fontFamily: 'Roboto, sans-serif'
           }}>
-            A Bold Way to Power Your Journey
+            A Bold Way to Live with K2
           </Typography>
         </Box>
       </Box>

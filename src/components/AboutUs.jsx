@@ -7,6 +7,7 @@ import facility3 from '../assets/facility3.JPG';
 import facility4 from '../assets/facility4.JPG';
 import facility5 from '../assets/facility5.JPG';
 import facility6 from '../assets/facility6.JPG';
+import Navigation from './Navigation';
 
 function AboutUs() {
   const navigate = useNavigate();
@@ -34,36 +35,7 @@ function AboutUs() {
           onClick={() => navigate('/')}
         />
         <Box sx={{ display: 'flex', gap: 4 }}>
-          <Typography
-            sx={{
-              color: 'white',
-              cursor: 'pointer',
-              '&:hover': { opacity: 0.8 },
-            }}
-            onClick={() => navigate('/product')}
-          >
-            Products
-          </Typography>
-          <Typography
-            sx={{
-              color: 'white',
-              cursor: 'pointer',
-              '&:hover': { opacity: 0.8 },
-            }}
-            onClick={() => navigate('/about')}
-          >
-            About us
-          </Typography>
-          <Typography
-            sx={{
-              color: 'white',
-              cursor: 'pointer',
-              '&:hover': { opacity: 0.8 },
-            }}
-            onClick={() => navigate('/contact')}
-          >
-            Contact
-          </Typography>
+        <Navigation />
         </Box>
       </Box>
 
