@@ -62,10 +62,10 @@ function Contact() {
       </Box>
 
       {/* Contact Form Section */}
-      <Container maxWidth="lg" sx={{ py: 8 }}>
-        {/* 标题部分 - 占满宽度 */}
+      <Container maxWidth="lg" sx={{ py: { xs: 4, md: 8 } }}>
+        {/* 标题部分 */}
         <Typography variant="h2" sx={{ 
-          fontSize: '48px', 
+          fontSize: { xs: '36px', md: '48px' },
           fontWeight: 600, 
           mb: 2,
           '& span': {
@@ -79,13 +79,15 @@ function Contact() {
         </Typography>
 
         {/* 表单和地图的容器 */}
-        <Box sx={{ display: 'flex', gap: 4 }}>
+        <Box sx={{ 
+          display: 'flex', 
+          flexDirection: { xs: 'column', md: 'row' },  // 移动端垂直排列
+          gap: 4 
+          }}>
           {/* 左侧表单 */}
           <Box sx={{ 
-            flex: 1, 
-            display: 'flex',
-            flexDirection: 'column',
-            height: '500px'
+            flex: 1,
+            minHeight: { xs: 'auto', md: '500px' }  
           }}>
             <Box 
               component="form" 
@@ -194,7 +196,11 @@ function Contact() {
           </Box>
 
           {/* 右侧地图 */}
-          <Box sx={{ flex: 1, position: 'relative', minHeight: '500px' }}>
+          <Box sx={{ 
+            flex: 1, 
+            position: 'relative',
+            minHeight: { xs: '300px', md: '500px' }  // 移动端减小高度
+           }}>
             <Paper
               sx={{
                 position: 'absolute',
@@ -220,7 +226,12 @@ function Contact() {
         </Box>
 
         {/* 联系信息 */}
-        <Box sx={{ mt: 8, display: 'flex', gap: 8, justifyContent: 'center' }}>
+        <Box sx={{ 
+          mt: { xs: 4, md: 8 }, 
+          display: 'flex', 
+          flexDirection: { xs: 'column', md: 'row' },  // 移动端垂直排列
+          gap: { xs: 4, md: 8 }, 
+          alignItems: 'center' }}>
           <Box sx={{ textAlign: 'center' }}>
             <Typography sx={{ color: 'rgba(255,255,255,0.6)', mb: 1 }}>
               ADDRESS

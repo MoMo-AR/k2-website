@@ -70,7 +70,7 @@ function Hero() {
           top: 0,
           left: 0,
           width: '100%',
-          padding: '32px 80px',
+          padding: { xs: '16px 20px', md: '32px 80px' },
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
@@ -83,9 +83,7 @@ function Hero() {
           src={k2Logo}
           alt="K2 Battery Logo"
           sx={{
-            height: '40px',
-            width: 'auto',
-            objectFit: 'contain',
+            height: { xs: '30px', md: '40px' },
           }}
         />
 
@@ -100,7 +98,7 @@ function Hero() {
           height: '100%',
           display: 'flex',
           alignItems: 'center',
-          padding: '0 80px',
+          padding: { xs: '0 20px', md: '0 80px' },
           zIndex: 4,
         }}
       >
@@ -108,14 +106,14 @@ function Hero() {
           <Typography
             sx={{
               color: '#575C4B',
-              fontSize: '14px',
-              letterSpacing: 4,
+              fontSize: { xs: '12px', md: '14px' },
+              letterSpacing: { xs: 2, md: 4 },
               mb: 2,
               display: 'flex',
               alignItems: 'center',
               '&:before': {
                 content: '""',
-                width: '40px',
+                width: { xs: '20px', md: '40px' },
                 height: '2px',
                 bgcolor: '#575C4B',
                 mr: 2,
@@ -136,7 +134,7 @@ function Hero() {
             wrapper="h1"
             speed={50}
             style={{
-              fontSize: '64px',
+              fontSize: window.innerWidth < 600 ? '36px' : '64px',
               fontWeight: 600,
               marginBottom: '16px',
               display: 'inline-block',

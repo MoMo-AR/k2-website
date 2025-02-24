@@ -100,34 +100,41 @@ function ProductPage() {
         </Box>
       </Box>
       {/* Who we are Section */}
-      <Container maxWidth="lg" sx={{ py: 12 }}>
-        <Box sx={{ display: 'flex', gap: 8, alignItems: 'center' }}>
-          <Box sx={{ flex: 1 }}>
-            <Typography variant="h3" sx={{ fontSize: '32px', fontWeight: 600, mb: 4 }}>
-              12V 100Ah LiFePO4 Battery
-            </Typography>
-            <Typography sx={{ mb: 3, lineHeight: 1.8, color: 'white' }}>
-              The 12V 100Ah LiFePO4 battery is designed for RVs, recreational solar systems, and powering DC or AC inverters. With a capacity of 1280Wh and the safety of LiFePO4 technology, it's the ideal choice for campers and 4X4 enthusiasts.
-            </Typography>
-            <Typography sx={{ mb: 3, lineHeight: 1.8, color: 'white' }}>
-              This battery is also perfect for upgrading from lead-acid or older lithium-ion batteries, offering a significant boost in capacity and longevity (over 5000 cycles in optimal conditions). With its long lifespan, it can quickly pay for itself.
-            </Typography>
-            <Typography sx={{ lineHeight: 1.8, color: 'white' }}>
-              
-            </Typography>
-          </Box>
-          <Box
-            component="img"
-            src={surfboard}
-            alt="Battery"
-            sx={{
-              flex: 1,
-              maxWidth: '500px',
-              borderRadius: '8px',
-              boxShadow: '0 8px 24px rgba(0,0,0,0.2)',
-            }}
-          />
-        </Box>
+      <Container maxWidth="lg" sx={{ py: { xs: 4, md: 12 } }}>
+        <Grid container spacing={{ xs: 4, md: 8 }}>
+          <Grid item xs={12} md={6}>
+            <Box sx={{ 
+              display: 'flex', 
+              flexDirection: 'column', 
+              alignItems: { xs: 'center', md: 'flex-start' },  // 移动端居中
+              textAlign: { xs: 'center', md: 'left' }  // 移动端文字居中
+            }}>
+              <Typography variant="h3" sx={{ fontSize: '32px', fontWeight: 600, mb: 4 }}>
+                12V 100Ah LiFePO4 Battery
+              </Typography>
+              <Typography sx={{ mb: 3, lineHeight: 1.8, color: 'white' }}>
+                The 12V 100Ah LiFePO4 battery is designed for RVs, recreational solar systems, and powering DC or AC inverters. With a capacity of 1280Wh and the safety of LiFePO4 technology, it's the ideal choice for campers and 4X4 enthusiasts.
+              </Typography>
+              <Typography sx={{ mb: 3, lineHeight: 1.8, color: 'white' }}>
+                This battery is also perfect for upgrading from lead-acid or older lithium-ion batteries, offering a significant boost in capacity and longevity (over 5000 cycles in optimal conditions). With its long lifespan, it can quickly pay for itself.
+              </Typography>
+              <Typography sx={{ lineHeight: 1.8, color: 'white' }}>
+                For more details, contact us or visit our Support page for technical specifications.
+              </Typography>
+            </Box>
+            {/* <Box
+              component="img"
+              src={surfboard}
+              alt="Battery"
+              sx={{
+                flex: 1,
+                maxWidth: '500px',
+                borderRadius: '8px',
+                boxShadow: '0 8px 24px rgba(0,0,0,0.2)',
+              }}
+            /> */}
+          </Grid>
+        </Grid>
       </Container>
 
       {/* Our concept Section */}
