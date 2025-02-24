@@ -60,6 +60,7 @@ function Footer() {
                   cursor: 'pointer',
                   '&:hover': { color: '#FBD784' },
                 }}
+                onClick={() => navigate('/about')}
               >
                 About K2
               </Typography>

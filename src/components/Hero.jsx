@@ -92,18 +92,19 @@ function Hero() {
             wrapper="h1"
             speed={50}
             style={{
-              fontSize: window.innerWidth < 600 ? '36px' : '64px',
+              fontSize: window.innerWidth < 600 ? '28px' : '64px',
               fontWeight: 600,
               marginBottom: '16px',
               display: 'inline-block',
               color: '#0B3524',
-              fontFamily: 'Roboto, sans-serif'
+              fontFamily: 'Roboto, sans-serif',
+              lineHeight: window.innerWidth < 600 ? '1.2' : '1.4',
             }}
             repeat={Infinity}
           />
           
           <Typography variant="h2" sx={{ 
-            fontSize: '64px', 
+            fontSize: { xs: '24px', sm: '36px', md: '64px' },
             fontWeight: 600,
             opacity: 0,
             animation: 'fadeIn 1s ease-in forwards',
@@ -113,7 +114,8 @@ function Hero() {
             },
             animationDelay: '1s',
             color: '#333333',
-            fontFamily: 'Roboto, sans-serif'
+            fontFamily: 'Roboto, sans-serif',
+            lineHeight: { xs: 1.2, md: 1.4 }
           }}>
             A Bold Way to Live with K2
           </Typography>
