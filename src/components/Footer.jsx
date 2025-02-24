@@ -1,6 +1,9 @@
 import { Box, Typography, Container, Grid } from '@mui/material';
 import k2Logo from '../assets/k2_logo.png';
+import { useNavigate } from 'react-router-dom';
+
 function Footer() {
+  const navigate = useNavigate();
   return (
     <Box
       sx={{
@@ -67,6 +70,7 @@ function Footer() {
                   cursor: 'pointer',
                   '&:hover': { color: '#FBD784' },
                 }}
+                onClick={() => navigate('/product')}
               >
                 Products
               </Typography>
@@ -77,6 +81,7 @@ function Footer() {
                   cursor: 'pointer',
                   '&:hover': { color: '#FBD784' },
                 }}
+                onClick={() => navigate('/contact')}
               >
                 Partnerships
               </Typography>
@@ -93,6 +98,12 @@ function Footer() {
               }}
             >
               Contact Us
+            </Typography>
+            <Typography sx={{ mb: 1 }}>
+              Info@k2energysolutions.com.au
+            </Typography>
+            <Typography>
+              sales@k2energysolutions.com.au
             </Typography>
           </Grid>
         </Grid>
